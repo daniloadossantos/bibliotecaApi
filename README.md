@@ -2,7 +2,9 @@
 
 > API RESTful para gerenciamento de livraria desenvolvida em C# com ASP.NET Core
 
-[Adicione badges aqui - vou te passar depois]
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 
 ## 📖 Sobre
 
