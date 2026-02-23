@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookstoreRocketseat</name>
+    </assembly>
+    <members>
+        <member name="M:BookstoreRocketseat.Controllers.BookController.Create(BookstoreRocketseat.Communications.Requests.RequestNewBookJson)">
+            <summary>
+            Cria um novo livro na livraria
+            </summary>
+            <param name="request">Dados do livro a ser criado (título, autor, gênero, preço e estoque)</param>
+            <returns>Retorna o livro criado com ID e data de criação</returns>
+            <response code="201">Livro criado com sucesso</response>
+            <response code="400">Dados inválidos ou incompletos</response>
+            <response code="409">Conflito - Livro com mesmo título e autor já existe</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:BookstoreRocketseat.Controllers.BookController.GetAll">
+            <summary>
+            Lista todos os livros cadastrados na livraria
+            </summary>
+            <returns>Retorna lista com todos os livros</returns>
+            <response code="200">Lista de livros retornada com sucesso</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:BookstoreRocketseat.Controllers.BookController.GetBookById(System.Guid)">
+            <summary>
+            Busca um livro específico pelo seu ID
+            </summary>
+            <param name="id">ID único do livro (formato GUID)</param>
+            <returns>Retorna os dados do livro encontrado</returns>
+            <response code="200">Livro encontrado com sucesso</response>
+            <response code="404">Livro não encontrado com o ID informado</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:BookstoreRocketseat.Controllers.BookController.UpdateBook(System.Guid,BookstoreRocketseat.Communications.Requests.RequestUpdateBookJson)">
+            <summary>
+            Atualiza as informações de um livro existente
+            </summary>
+            <param name="id">ID do livro a ser atualizado</param>
+            <param name="request">Novos dados do livro (todos os campos são obrigatórios)</param>
+            <returns>Retorna o livro atualizado com a data de modificação</returns>
+            <response code="200">Livro atualizado com sucesso</response>
+            <response code="400">Dados inválidos ou incompletos</response>
+            <response code="404">Livro não encontrado com o ID informado</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:BookstoreRocketseat.Controllers.BookController.DeleteBook(System.Guid)">
+            <summary>
+            Remove um livro da livraria
+            </summary>
+            <param name="id">ID do livro a ser removido</param>
+            <returns>Mensagem de confirmação da exclusão</returns>
+            <response code="200">Livro removido com sucesso</response>
+            <response code="404">Livro não encontrado com o ID informado</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+    </members>
+</doc>
